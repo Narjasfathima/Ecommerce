@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% block content %}
+
+    <form class="reg" action="" method="post">
+        {% csrf_token %}
+        
+          <h3>SignUp</h3>
+        
+            {{form}}
+            
+        <button class="btn btn-info">SignUp</button>
+
+        <div class="social">
+          Already registered?.<a href="{% url 'login' %}">Login</a>
+        </div>
+    </form>
+{% endblock content%}
